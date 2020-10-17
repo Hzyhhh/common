@@ -28,7 +28,7 @@ export function cls(
 ) {
   return (
     Object.keys(opt)
-      .filter(key => !!opt[key])
+      .filter((key) => !!opt[key])
       // @ts-ignore
       .concat(other.filter(Boolean))
       .join(' ')
