@@ -22,7 +22,10 @@ export const IN_SSR = typeof navigator === 'undefined'
  * cls({ active: false }, 'tab')  // => ' tab'
  * ```
  */
-export function cls(opt: { [name: string]: any }, ...other: Array<string | undefined | null>) {
+export function cls(
+  opt: { [name: string]: any },
+  ...other: Array<string | undefined | null>
+) {
   return (
     Object.keys(opt)
       .filter(key => !!opt[key])
