@@ -1,0 +1,2 @@
+# common
+common js function
