@@ -1,6 +1,6 @@
 {
   "name": "@hzyhhh/common",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "",
   "main": "dist/common.modern.js",
   "module": "dist/common.module.ts",
