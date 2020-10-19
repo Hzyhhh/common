@@ -1,5 +1,5 @@
 {
-  "name": "@hzyhhh/common",
+  "name": "common",
   "version": "1.2.3",
   "description": "",
   "author": "hzyhhh",
@@ -13,7 +13,7 @@
   "homepage": "https://github.com/Hzyhhh/common#readme",
   "scripts": {
     "bootstrap": "yarn",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "change": "lerna changed",
     "build-all": "lerna run build",
     "lerna-publish": "lerna publish"
   },
