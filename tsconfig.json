@@ -8,7 +8,7 @@
     "allowJs": false,
     "declaration": true,
     "moduleResolution": "node",
-    "rootDir": "src",
+    "rootDir": "packages",
     "importHelpers": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
