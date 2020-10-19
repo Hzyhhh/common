@@ -1,7 +1,7 @@
 {
   "version": "0.0.1",
   "dependencies": {
-    "@hzyhhh/common": "^1.2.0",
+    "@hzyhhh/common": "^1.2.5",
     "parcel": "^1.12.4"
   }
 }
