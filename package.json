@@ -3,6 +3,7 @@
   "version": "1.2.3",
   "description": "",
   "author": "hzyhhh",
+  "private": true,
   "repository": {
     "url": "https://github.com/Hzyhhh/common.git"
   },
