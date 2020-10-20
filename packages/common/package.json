@@ -7,12 +7,20 @@
   "scripts": {
     "precommit": "lint-staged",
     "prepublish": "npm run build",
-    "build": "microbundle -f modern --name index --compress false src/common.ts"
+    "build": "microbundle -f modern --name index --compress false src/common.ts",
+    "build-a": "microbundle -f modern --compress false src/common.ts"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
     "access": "public"
   },
+  "repository": {
+    "url": "https://github.com/Hzyhhh/common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hzyhhh/common/issues"
+  },
+  "homepage": "https://github.com/Hzyhhh/common#readme",
   "sideEffects": false,
   "files": [
     "dist"
