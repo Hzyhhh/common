@@ -1,7 +1,7 @@
 {
   "name": "@hzyhhh/common",
   "version": "1.1.2",
-  "description": "",
+  "description": "common utils function",
   "source": "src/index.ts",
   "main": "lib/index.js",
   "module": "lib/index.module.js",
