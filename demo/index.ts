@@ -1,3 +1,3 @@
-import { ChromeVersion } from '@hzyhhh/common/lib'
+import { ChromeVersion } from '@hzyhhh/common'
 
 console.log(ChromeVersion)

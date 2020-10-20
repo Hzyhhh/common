@@ -873,10 +873,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@hzyhhh/common@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.npm.taobao.org/@hzyhhh/common/download/@hzyhhh/common-1.2.5.tgz#f33206cbdfbe71a05807d6f38a6708bfec046d41"
-  integrity sha1-8zIGy9++caBYB9bzimcIv+wEbUE=
+"@hzyhhh/common@^1.2.10":
+  version "1.2.10"
+  resolved "https://registry.npm.taobao.org/@hzyhhh/common/download/@hzyhhh/common-1.2.10.tgz?cache=0&sync_timestamp=1603170836332&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40hzyhhh%2Fcommon%2Fdownload%2F%40hzyhhh%2Fcommon-1.2.10.tgz#3928b94bf395e627e507b8bbdb031ff9414f3dce"
+  integrity sha1-OSi5S/OV5iflB7i72wMf+UFPPc4=
 
 "@iarna/toml@^2.2.0":
   version "2.2.5"
@@ -4884,6 +4884,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.npm.taobao.org/typescript/download/typescript-4.0.3.tgz?cache=0&sync_timestamp=1603090398070&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-4.0.3.tgz#153bbd468ef07725c1df9c77e8b453f8d36abba5"
+  integrity sha1-FTu9Ro7wdyXB35x36LRT+NNqu6U=
 
 uncss@^0.17.3:
   version "0.17.3"
