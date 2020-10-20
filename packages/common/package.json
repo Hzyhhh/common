@@ -7,7 +7,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "prepublish": "npm run build",
-    "build": "microbundle -f modern --name common --compress false src/index.ts"
+    "build": "microbundle -f modern --name index --compress false src/index.ts"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
