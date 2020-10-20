@@ -2,3 +2,5 @@ node_modules/
 .rts2_cache_cjs/
 .vscode/
 lib/
+dist/
+.cache/
