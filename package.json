@@ -1,9 +1,16 @@
 {
   "name": "common",
   "version": "1.2.3",
-  "description": "",
+  "description": "common utils function",
   "author": "Hzyhhh",
   "private": true,
+  "source": "src/index.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.module.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "repository": {
     "url": "https://github.com/Hzyhhh/common.git"
   },
