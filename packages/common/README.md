@@ -5,7 +5,6 @@ common js function
 # Publish Issues
 
 ```
-yarn build
-npm login
-npm publish
+yarn
+lerna publish
 ```
