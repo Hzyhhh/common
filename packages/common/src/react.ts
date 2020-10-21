@@ -7,8 +7,6 @@
  */
 export const IN_SSR = typeof navigator === 'undefined'
 
-export const Test = 'test'
-
 /**
  * 动态生成 css 类名
  * 通过传入kv对象，在判断value值，动态计算节点类名
