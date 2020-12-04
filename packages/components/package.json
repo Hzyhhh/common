@@ -1,0 +1,49 @@
+{
+  "name": "@hzyhhh/components",
+  "version": "1.0.0",
+  "description": "",
+  "module": "dist/components.modern.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "microbundle -f modern --name index --compress false src/index.ts",
+    "clean": "rimraf dist"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "url": "https://github.com/Hzyhhh/common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hzyhhh/common/issues"
+  },
+  "homepage": "https://github.com/Hzyhhh/common#readme",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "function"
+  ],
+  "lint-staged": {
+    "*.ts?(x)": [
+      "npm run prettier",
+      "git add"
+    ]
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "microbundle": "^0.12.0-next.8"
+  },
+  "dependencies": {
+    "@hzyhhh/common": "^1.2.12",
+    "microbundle": "^0.12.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-spring": "^8.0.27"
+  }
+}
