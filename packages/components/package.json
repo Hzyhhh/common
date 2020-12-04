@@ -1,6 +1,6 @@
 {
   "name": "@hzyhhh/components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "module": "dist/components.modern.js",
   "types": "dist/index.d.ts",
@@ -40,7 +40,7 @@
     "microbundle": "^0.12.0-next.8"
   },
   "dependencies": {
-    "@hzyhhh/common": "^1.2.12",
+    "@hzyhhh/common": "^1.2.13",
     "microbundle": "^0.12.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

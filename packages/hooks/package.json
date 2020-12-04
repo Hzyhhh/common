@@ -1,12 +1,12 @@
 {
   "name": "@hzyhhh/hooks",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "module": "dist/hooks.modern.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "microbundle -f modern --name index --compress false src/index.ts"
+    "build": "microbundle -f modern --name hooks --compress false src/index.ts"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
