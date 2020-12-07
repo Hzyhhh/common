@@ -1,6 +1,6 @@
 {
   "name": "@hzyhhh/components",
-  "version": "1.0.2",
+  "version": "1.0.3-alpha.0",
   "description": "",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,9 +35,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "react-spring": "^8.0.27",
     "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0"
+    "@types/react-dom": "^17.0.0",
+    "react-spring": "^8.0.27"
   },
   "peerDependencies": {
     "react": ">=16.8.5",
