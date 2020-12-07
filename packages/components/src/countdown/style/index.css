@@ -1,0 +1,30 @@
+.clock-wrapper {
+  display: flex;
+  font-weight: bolder;
+  color: var(--bg-main-color);
+  font-size: 5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-wrapper span {
+  transform: translateY(-5px) scale(0.8);
+}
+
+.clock-wrapper > div {
+  position: relative;
+  overflow: hidden;
+  width: 1.4em;
+  height: 1.5em;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 1px 1px 6px 0 #ccc;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seconds > div {
+  position: absolute;
+}
