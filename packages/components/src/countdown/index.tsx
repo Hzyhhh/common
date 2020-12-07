@@ -2,7 +2,12 @@ import React, { FC, useEffect, useMemo, useState } from 'react'
 import { animated } from 'react-spring'
 import { useCountdown } from '@hzyhhh/hooks'
 
-import './style/index.css'
+// @ts-ignore
+window.React2 = require('react')
+// @ts-ignore
+console.log(window.React1 === window.React2)
+
+// import './style/index.css'
 
 // @ts-ignore
 const secendsArr = Array.from(new Array(60)).map((i, idx) => ({ style }) => (

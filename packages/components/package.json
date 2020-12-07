@@ -2,12 +2,12 @@
   "name": "@hzyhhh/components",
   "version": "1.0.2",
   "description": "",
-  "module": "dist/components.modern.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "microbundle -f modern --name index --compress false src/index.ts",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "build": "yarn clean && tsc -b tsconfig.json"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
@@ -35,15 +35,16 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "react-spring": "^8.0.27",
     "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "microbundle": "^0.12.0-next.8"
+    "@types/react-dom": "^17.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.5",
+    "react-dom": ">=16.8.5"
   },
   "dependencies": {
     "@hzyhhh/common": "^1.2.13",
-    "microbundle": "^0.12.4",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-spring": "^8.0.27"
+    "tslib": "^2.0.3"
   }
 }
