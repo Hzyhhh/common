@@ -101,7 +101,7 @@ interface CountdownProps {
 
 export const Countdown: FC<CountdownProps> = (props) => {
   const { timeStamp } = props
-  console.log(timeStamp)
+  // console.log(timeStamp)
 
   const time = new Date(timeStamp)
   const hour = time.getHours()
