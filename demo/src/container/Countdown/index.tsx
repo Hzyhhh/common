@@ -1,11 +1,9 @@
 import React from 'react'
 import { Countdown } from '@hzyhhh/components'
+import '@hzyhhh/components/src/countdown/style/css'
 
-// const timeStamp = new Date().valueOf()
-// eslint-disable-next-line
+const timeStamp = new Date().valueOf()
 export default () => {
-  // 在你的组件文件中加入这些代码
-
-  return <Countdown timeStamp={0} />
+  return <Countdown timeStamp={timeStamp} />
   //   return <div >123</div>
 }
