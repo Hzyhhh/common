@@ -25,6 +25,8 @@
   align-items: center;
 }
 
+.hour > div,
+.minutes > div,
 .seconds > div {
   position: absolute;
 }

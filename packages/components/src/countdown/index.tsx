@@ -1,13 +1,6 @@
-import React, { FC, useEffect, useMemo, useState } from 'react'
+import React, { FC, useEffect, useRef, useState } from 'react'
 import { animated } from 'react-spring'
 import { useCountdown } from '@hzyhhh/hooks'
-
-// @ts-ignore
-window.React2 = require('react')
-// @ts-ignore
-console.log(window.React1 === window.React2)
-
-// import './style/index.css'
 
 // @ts-ignore
 const secendsArr = Array.from(new Array(60)).map((i, idx) => ({ style }) => (
@@ -23,12 +16,21 @@ const hourArr = Array.from(new Array(24)).map((i, idx) => ({ style }) => (
   </animated.div>
 ))
 
-function Clock(props: { timeStamp: number }) {
-  const { timeStamp } = props
+function Clock(props: { timeStamp: number; onHideRefresh?: () => void }) {
+  const { timeStamp, onHideRefresh: fn } = props
 
   const [hour, setHour] = useState<number>(0)
   const [minutes, setMinutes] = useState<number>(0)
   const [seconds, setSeconds] = useState<number>(0)
+  const timeRef = useRef<{
+    hour: number
+    minutes: number
+    seconds: number
+  }>({
+    hour,
+    minutes,
+    seconds,
+  })
 
   const sTransitions = useCountdown(seconds)
   const mTransitions = useCountdown(minutes)
@@ -40,32 +42,47 @@ function Clock(props: { timeStamp: number }) {
     const minutes = date.getMinutes()
     const seconds = date.getSeconds()
 
+    timeRef.current = { hour, minutes, seconds }
     setHour(hour)
     setMinutes(minutes)
     setSeconds(seconds)
-  }, [timeStamp])
+  }, [])
 
+  const handleTimerChange = () => {
+    const { seconds, minutes, hour } = timeRef.current
+    timeRef.current = {
+      seconds: seconds > 0 ? seconds - 1 : 59,
+      minutes: seconds === 0 ? (minutes > 0 ? minutes - 1 : 59) : minutes,
+      hour: seconds === 0 && minutes === 0 ? (hour > 0 ? hour - 1 : 24) : hour,
+    }
+    if (document.visibilityState == 'visible') {
+      const { hour, minutes, seconds } = timeRef.current
+
+      setSeconds(seconds)
+      setMinutes(minutes)
+      setHour(hour)
+    } else {
+      /**
+       * 优雅刷新的回调
+       */
+      if (fn) {
+        fn()
+      }
+      /**
+       * TODO: 离开屏幕强制刷新
+       */
+      window.location.reload()
+    }
+  }
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setSeconds((v) => {
-        if (v - 1 >= 0) {
-          return v - 1
-        }
-        setMinutes((v) => {
-          if (v - 1 >= 0) {
-            return v - 1
-          }
-          setHour((v) => (v - 1 >= 0 ? v - 1 : 24))
-          return 59
-        })
-        return 59
-      })
-    }, 1000)
+    const timer = setTimeout(() => handleTimerChange(), 1000)
+    document.addEventListener('visibilitychange', handleTimerChange)
 
     return () => {
       clearTimeout(timer)
+      document.removeEventListener('visibilitychange', handleTimerChange)
     }
-  }, [seconds, minutes, hour])
+  }, [seconds])
 
   return (
     <div className="clock-wrapper">
@@ -101,19 +118,6 @@ interface CountdownProps {
 
 export const Countdown: FC<CountdownProps> = (props) => {
   const { timeStamp } = props
-  // console.log(timeStamp)
-
-  const time = new Date(timeStamp)
-  const hour = time.getHours()
-  const minutes = time.getMinutes()
-  const seconds = time.getSeconds()
-
-  const isOver = useMemo(() => {
-    if (hour === 0 && minutes === 0 && seconds === 0) {
-      return true
-    }
-    return false
-  }, [])
 
   const renderNumber = (time: number) => {
     if (time === 0) {
@@ -122,7 +126,7 @@ export const Countdown: FC<CountdownProps> = (props) => {
     return <Clock timeStamp={time} />
   }
 
-  return isOver ? renderNumber(0) : renderNumber(timeStamp)
+  return renderNumber(timeStamp)
 }
 
 export default Countdown
