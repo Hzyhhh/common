@@ -1,0 +1,24 @@
+  /*  */
+  .primary-button {
+    width: 80%;
+    line-height: 3em;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #0a4891;
+    text-align: center;
+    margin: 0.8em 0;
+    border: 1px solid #c7d5e5;
+  }
+  .primary-button.primary {
+    background-color: #0a4891;
+    color: #fff;
+  }
+  .primary-button.danger {
+    background-color: red;
+    color: #fff;
+  }
+  .primary-button.warning {
+    background-color: orange;
+    color: #fff;
+  }
+  
