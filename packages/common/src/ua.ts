@@ -61,6 +61,11 @@ export const isMiniProgram = UA.indexOf('miniprogram') !== -1
 export const isWechat = UA.indexOf('micromessenger') !== -1
 
 /**
+ * QQwebview
+ */
+export const isQQ = UA.indexOf('qq') !== -1
+
+/**
  * 工作宝
  */
 export const isGZB = UA.indexOf('gzb') !== -1
