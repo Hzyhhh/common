@@ -133,3 +133,20 @@ export const FirefoxVersion =
     }
     return 0
   })()
+
+/**
+ * 计算版本号大小,转化大小
+ * 例: '1.2.3123' > '1.2.3122' => true
+ */
+export function versionFormat(version: string) {
+  let a = version.toString()
+  let c = a.split('.')
+  let num_place = ['', '0', '00', '000', '0000'],
+    r = num_place.reverse()
+  for (let i = 0; i < c.length; i++) {
+    let len = c[i].length
+    c[i] = r[len] + c[i]
+  }
+  let res = c.join('')
+  return res
+}
