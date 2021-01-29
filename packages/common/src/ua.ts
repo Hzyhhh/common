@@ -63,7 +63,12 @@ export const isWechat = UA.indexOf('micromessenger') !== -1
 /**
  * QQwebview
  */
-export const isQQ = UA.indexOf('qq') !== -1
+export const isQQ = UA.match(/qq/i)?.[0] == 'qq'
+
+/**
+ * QQ浏览器
+ */
+export const isQQBrowser = UA.indexOf('mqqbrowser') !== -1
 
 /**
  * 工作宝
