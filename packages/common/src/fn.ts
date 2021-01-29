@@ -6,7 +6,9 @@ export const noop = () => {}
 let base64EncodeChars =
   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 
-//客户端Base64编码
+/**
+ * 客户端Base64编码
+ */
 export function base64encode(str: string) {
   let out, i, len
   let c1, c2, c3
