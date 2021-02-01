@@ -2,7 +2,6 @@
 /**
  * 二分法 匹配数组中的元素
  * 排序数组
- * TODO: 待验证
  */
 export function devided(sourceArr: string[] | number[], target: string | number) {
     let start = 0, end = sourceArr.length - 1, middle, element
