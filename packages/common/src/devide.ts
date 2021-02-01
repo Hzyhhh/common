@@ -11,12 +11,11 @@ export function devided(sourceArr: string[] | number[], target: string | number)
     while (start <= end) {
         if (target > element) {
             start = middle
-            continue
         } else if (target < element) {
             end = middle
-            continue
         } else {
             return element
         }
     }
+    return -1
 }
